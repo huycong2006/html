@@ -1,83 +1,76 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Trang web cơ bản</title>
-  <style>
-    /* CSS cho nội dung chính */
-    main {
-      font-family: Arial, sans-serif;
-      font-size: 16px;
-      background-color: #f0f8ff;
-    }
-
-    /* CSS cho tiêu đề */
-    header {
-      background-color: #4a90e2;
-      color: white;
-      text-align: center;
-      padding: 10px;
-    }
-
-    /* CSS cho thanh điều hướng */
-    nav {
-      background-color: #1e3d59;
-      padding: 10px;
-      text-align: center;
-    }
-    nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-    nav li {
-      display: inline-block;
-      width: 100px;
-      text-align: center;
-    }
-
-    /* CSS cho chân trang */
-    footer {
-      background-color: #333;
-      color: white;
-      text-align: center;
-      padding: 5px;
-    }
-
-    /* CSS cho tiêu đề h1 */
-    h1 {
-      text-align: center;
-      font-family: Verdana;
-      color: yellow;
-    }
-
-    /* CSS cho đoạn văn */
-    p {
-      line-height: 1.5;
-    }
-  </style>
+<meta charset="UTF-8">
+<title>Thế giới động vật dễ thương</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f2f2f2;
+  }
+  #image {
+    background-image: url("");
+    background-size: cover;
+    background-position: center;
+    width: 600px;
+    height: 350px;
+    margin: 20px auto;
+    border-radius: 15px;
+    border: 2px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #444;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .animal {
+    width: 120px;
+    height: 80px;
+    margin: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  .animal:hover {
+    transform: scale(1.1);
+  }
+</style>
 </head>
+
 <body>
-  <header>
-    <h1>Trang web của tôi</h1>
-  </header>
+  <h2>🐾 Di chuột vào hình con vật để xem chi tiết</h2>
 
-  <nav>
-    <ul>
-      <li><a href="#">Trang chủ</a></li>
-      <li><a href="#">Giới thiệu</a></li>
-      <li><a href="#">Liên hệ</a></li>
-    </ul>
-  </nav>
+  <div id="image">
+    Di chuột qua một hình ảnh bên dưới để hiển thị ở đây.
+  </div>
 
-  <main>
-    <h2>Nội dung chính</h2>
-    <p>Đây là ví dụ về trang web cơ bản sử dụng CSS. Bài làm này chỉ mang tính minh họa đơn giản.</p>
-  </main>
+  <div>
+    <img class="animal" src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d?w=400" 
+         alt="Chó con" onmouseover="update(this)" onmouseout="undo()">
+    <img class="animal" src="https://images.unsplash.com/photo-1517423440428-a5a00ad493e8?w=400" 
+         alt="Mèo" onmouseover="update(this)" onmouseout="undo()">
+    <img class="animal" src="https://images.unsplash.com/photo-1504208434309-cb69f4fe52b0?w=400" 
+         alt="Chim cánh cụt" onmouseover="update(this)" onmouseout="undo()">
+    <img class="animal" src="https://images.unsplash.com/photo-1601758123927-19821a022a52?w=400" 
+         alt="Cá vàng" onmouseover="update(this)" onmouseout="undo()">
+  </div>
 
-  <footer>
-    <p>© 2025 - Trang web luyện tập CSS cơ bản</p>
-  </footer>
+  <script>
+    function update(previewPic) {
+      console.log("Sự kiện kích hoạt: di chuột vào hình", previewPic.alt);
+      let imageDiv = document.getElementById("image");
+      imageDiv.style.backgroundImage = "url('" + previewPic.src + "')";
+      imageDiv.innerText = previewPic.alt;
+    }
+
+    function undo() {
+      console.log("Hoàn tác: rời chuột khỏi hình.");
+      let imageDiv = document.getElementById("image");
+      imageDiv.style.backgroundImage = "url('')";
+      imageDiv.innerText = "Di chuột qua một hình ảnh bên dưới để hiển thị ở đây.";
+    }
+  </script>
 </body>
 </html>
