@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Các loài động vật</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+    header {
+      text-align: center;
+      background-color: #dff0d8;
+      padding: 10px;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      background-color: #2b7a0b;
+      padding: 10px;
+      border-radius: 10px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+    nav a:hover {
+      background-color: #3e9e1b;
+    }
+    main {
+      margin: 20px;
+      text-align: center;
+    }
+    .animal-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .animal {
+      width: 250px;
+      border: 2px solid #ccc;
+      border-radius: 15px;
+      padding: 10px;
+      transition: transform 0.3s;
+    }
+    .animal:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 10px #999;
+    }
+    .animal img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    footer {
+      text-align: center;
+      background-color: #dff0d8;
+      padding: 10px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Các loài động vật nổi bật</h1>
+    <nav>
+      <a href="index.html">Trang chủ</a>
+      <a href="dongvat.html">Động vật</a>
+      <a href="anh.html">Bộ sưu tập ảnh</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="animal-list">
+      <div class="animal">
+        <img src="https://khoinguonsangtao.vn/wp-content/uploads/2022/10/anh-su-tu-gia.jpg" alt="Sư tử">
+        <p><strong>Sư tử</strong><br>Vua của thảo nguyên châu Phi.</p>
+      </div>
+      <div class="animal">
+        <img src="https://img1.kienthucvui.vn/uploads/2019/10/30/hinh-anh-con-voi-khong-lo_111944888.jpg" alt="Voi">
+        <p><strong>Voi</strong><br>Động vật trên cạn lớn nhất thế giới.</p>
+      </div>
+      <div class="animal">
+        <img src="https://media.istockphoto.com/id/520373466/vi/anh/h%E1%BB%95-bengal-tr%C3%AAn-c%C3%A2y-b%E1%BA%AFn-%C4%91%E1%BB%99ng-v%E1%BA%ADt-hoang-d%C3%A3.jpg?s=612x612&w=0&k=20&c=FPEOOrVSGzd7VkbUR4RJbg5tAGeVmf8-2NX2QTzqDNk=" alt="Hổ Bengal">
+        <p><strong>Hổ Bengal</strong><br>Biểu tượng của sức mạnh và dũng mãnh.</p>
+      </div>
+      <div class="animal">
+        <img src="https://khoinguonsangtao.vn/wp-content/uploads/2022/10/hinh-anh-gau-truc-1.jpg" alt="Gấu trúc">
+        <p><strong>Gấu trúc</strong><br>Loài động vật dễ thương đến từ Trung Quốc.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Thế giới động vật</p>
+  </footer>
+</body>
+</html>
