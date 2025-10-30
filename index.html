@@ -1,165 +1,142 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phim yêu thích của tôi</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            font-size: 16px;
-            margin: 0;
-        }
-
-        header {
-            text-align: center;
-            background-color: #f2f2f2;
-            padding: 10px;
-        }
-
-        nav {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 15px;
-            background-color: #333;
-            padding: 10px;
-            border-radius: 10px;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 8px 12px;
-            border-radius: 5px;
-            transition: background 0.3s;
-        }
-
-        nav a:hover {
-            background-color: #555;
-        }
-
-        nav img {
-            width: 40px;
-            height: 40px;
-        }
-
-        main {
-            margin: 20px;
-            text-align: center;
-        }
-
-        section img {
-            width: 200px;
-            border: 2px solid #ccc;
-            border-radius: 10px;
-            padding: 5px;
-            margin: 10px;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        section img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 10px #999;
-        }
-
-        section img:nth-child(odd) {
-            border-radius: 30px;
-        }
-
-        .poster-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
-            justify-items: center;
-        }
-
-        footer {
-            text-align: center;
-            background-color: #f2f2f2;
-            padding: 10px;
-            margin-top: 20px;
-        }
-
-        
-        #image {
-            width: 30vw;
-            height: 30vh;
-            margin: 0 auto 20px auto;
-            border: 2px dashed #aaa;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-size: cover;
-            background-position: center;
-            color: #333;
-            font-weight: bold;
-            font-size: 20px;
-            text-shadow: 1px 1px 3px white;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thế giới động vật</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      margin: 0;
+    }
+    header {
+      text-align: center;
+      background-color: #dff0d8;
+      padding: 10px;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      background-color: #2b7a0b;
+      padding: 10px;
+      border-radius: 10px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+    nav a:hover {
+      background-color: #3e9e1b;
+    }
+    nav img {
+      width: 40px;
+      height: 40px;
+    }
+    main {
+      margin: 20px;
+      text-align: center;
+    }
+    section img {
+      width: 200px;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      padding: 5px;
+      margin: 10px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    section img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 10px #999;
+    }
+    .poster-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      justify-items: center;
+    }
+    footer {
+      text-align: center;
+      background-color: #dff0d8;
+      padding: 10px;
+      margin-top: 20px;
+    }
+    #image {
+      width: 30vw;
+      height: 30vh;
+      margin: 0 auto 20px auto;
+      border: 2px dashed #aaa;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-size: cover;
+      background-position: center;
+      color: #333;
+      font-weight: bold;
+      font-size: 20px;
+      text-shadow: 1px 1px 3px white;
+    }
+  </style>
 </head>
 <body>
-    
-    <header>
-        <h1>Phim yêu thích của tôi</h1>
-        <nav>
-            <a href="index.html"><img src="https://cdn-icons-png.flaticon.com/512/25/25694.png" alt="Home icon"></a>
-            <a href="index.html">Trang chủ</a>
-            <a href="dienvien.html">Diễn viên</a>
-            <a href="anh.html">Bộ sưu tập ảnh</a>
-            <a href="index.html" class="skip-link">Skip to Main Content</a>
-        </nav>
-    </header>
 
-    <main id="main">
+  <header>
+    <h1>Thế giới động vật</h1>
+    <nav>
+      <a href="index.html"><img src="https://cdn-icons-png.flaticon.com/512/616/616408.png" alt="Home icon"></a>
+      <a href="index.html">Trang chủ</a>
+      <a href="dongvat.html">Động vật</a>
+      <a href="anh.html">Bộ sưu tập ảnh</a>
+      <a href="#main" class="skip-link">Bỏ qua nội dung</a>
+    </nav>
+  </header>
 
-        <div id="image">Di chuột qua một poster để hiển thị tại đây.</div>
+  <main id="main">
+    <div id="image">Di chuột qua ảnh để hiển thị tại đây.</div>
 
-        <section>
-            <h2>Phim Recommend</h2>
-            <ul>
-                <li>Inception</li>
-                <li>Oppenheimer</li>
-                <li>The Lord of the Rings</li>
-            </ul>
-        </section>
+    <section>
+      <h2>Động vật nổi bật</h2>
+      <ul>
+        <li>Sư tử</li>
+        <li>Voi châu Phi</li>
+        <li>Hổ Bengal</li>
+      </ul>
+    </section>
 
-        <section>
-            <h2>Poster Phim</h2>
-            <div class="poster-grid">
-                <img src="https://image.tmdb.org/t/p/original/8IB2e4r4oVhHnANbnm7O3Tj6tF8.jpg" alt="Inception Poster" onmouseover="upDate(this)" onmouseout="undo()">
-                <img src="https://i.etsystatic.com/40361189/r/il/40a377/5168340073/il_794xN.5168340073_nqfs.jpg" alt="Oppenheimer Poster" onmouseover="upDate(this)" onmouseout="undo()">
-                <img src="https://tse4.mm.bing.net/th/id/OIP._Zs2-XTOdPgCVww4rRGd9gHaK6" alt="The Lord of the Rings Poster" onmouseover="upDate(this)" onmouseout="undo()">
-            </div>
-        </section>
+    <section>
+      <h2>Ảnh động vật</h2>
+      <div class="poster-grid">
+        <img src="https://khoinguonsangtao.vn/wp-content/uploads/2022/10/anh-su-tu-gia.jpg" alt="Sư tử" onmouseover="upDate(this)" onmouseout="undo()">
+        <img src="https://img1.kienthucvui.vn/uploads/2019/10/30/hinh-anh-con-voi-khong-lo_111944888.jpg" alt="Voi châu Phi" onmouseover="upDate(this)" onmouseout="undo()">
+        <img src="https://media.istockphoto.com/id/520373466/vi/anh/h%E1%BB%95-bengal-tr%C3%AAn-c%C3%A2y-b%E1%BA%AFn-%C4%91%E1%BB%99ng-v%E1%BA%ADt-hoang-d%C3%A3.jpg?s=612x612&w=0&k=20&c=FPEOOrVSGzd7VkbUR4RJbg5tAGeVmf8-2NX2QTzqDNk=" alt="Hổ Bengal" onmouseover="upDate(this)" onmouseout="undo()">
+      </div>
+    </section>
 
-        <p>Để biết thêm thông tin về phim, truy cập <a href="https://www.imdb.com" target="_blank">IMDb</a>.</p>
-    </main>
+    <p>Tìm hiểu thêm tại <a href="https://www.nationalgeographic.com/animals/" target="_blank">National Geographic</a>.</p>
+  </main>
 
-    <footer>
-        <p>&copy; 2025 Phim yêu thích của tôi</p>
-    </footer>
+  <footer>
+    <p>&copy; 2025 Thế giới động vật</p>
+  </footer>
 
-    <script>
-        
-        function upDate(previewPic) {
-            console.log("Event triggered!");
-            console.log("Alt: " + previewPic.alt);
-            console.log("Src: " + previewPic.src);
+  <script>
+    function upDate(previewPic) {
+      const display = document.getElementById("image");
+      display.style.backgroundImage = "url('" + previewPic.src + "')";
+      display.innerHTML = previewPic.alt;
+    }
 
-            const display = document.getElementById("image");
-            display.style.backgroundImage = "url('" + previewPic.src + "')";
-            display.innerHTML = previewPic.alt;
-        }
-
-        
-        function undo() {
-            const display = document.getElementById("image");
-            display.style.backgroundImage = "url('')";
-            display.innerHTML = "Di chuột qua một poster để hiển thị tại đây.";
-        }
-    </script>
+    function undo() {
+      const display = document.getElementById("image");
+      display.style.backgroundImage = "none";
+      display.innerHTML = "Di chuột qua ảnh để hiển thị tại đây.";
+    }
+  </script>
 </body>
 </html>
