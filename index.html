@@ -1,76 +1,112 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-<meta charset="UTF-8">
-<title>Thế giới động vật dễ thương</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: #f2f2f2;
-  }
-  #image {
-    background-image: url("");
-    background-size: cover;
-    background-position: center;
-    width: 600px;
-    height: 350px;
-    margin: 20px auto;
-    border-radius: 15px;
-    border: 2px solid #ccc;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #444;
-    font-size: 20px;
-    font-weight: bold;
-  }
-  .animal {
-    width: 120px;
-    height: 80px;
-    margin: 10px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: transform 0.3s;
-  }
-  .animal:hover {
-    transform: scale(1.1);
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bộ sưu tập ảnh</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            margin: 0;
+        }
+
+        header {
+            text-align: center;
+            background-color: #f2f2f2;
+            padding: 10px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            background-color: #333;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        nav img {
+            width: 40px;
+            height: 40px;
+        }
+
+        main {
+            margin: 20px;
+            text-align: center;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            justify-items: center;
+        }
+
+        .gallery img {
+            width: 100%;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            padding: 5px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 10px #999;
+        }
+
+        .gallery img:nth-child(even) {
+            border-radius: 30px;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #f2f2f2;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
 </head>
-
 <body>
-  <h2>🐾 Di chuột vào hình con vật để xem chi tiết</h2>
+    
+    <header>
+        <h1>Bộ sưu tập ảnh</h1>
+        <nav>
+            <img src="https://cdn-icons-png.flaticon.com/512/25/25694.png" alt="Home icon">
+            <a href="index.html">Trang chủ</a>
+            <a href="dienvien.html">Diễn viên</a>
+            <a href="anh.html">Bộ sưu tập ảnh</a>
+            <a href="index.html" class="skip-link">Skip to Main Content</a>
+        </nav>
+    </header>
 
-  <div id="image">
-    Di chuột qua một hình ảnh bên dưới để hiển thị ở đây.
-  </div>
+    <main id="main">
+        <h2>Poster phim</h2>
+        <div class="gallery">
+            <img src="https://image.tmdb.org/t/p/original/8IB2e4r4oVhHnANbnm7O3Tj6tF8.jpg" alt="Inception">
+            <img src="https://i.etsystatic.com/40361189/r/il/40a377/5168340073/il_794xN.5168340073_nqfs.jpg" alt="Oppenheimer">
+            <img src="https://tse4.mm.bing.net/th/id/OIP._Zs2-XTOdPgCVww4rRGd9gHaK6" alt="Lord of the Rings">
+            <img src="https://tse2.mm.bing.net/th/id/OIP.y9-khK1MKdJ4WsWffqYqAAHaK5?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Titanic">
+            <img src="https://m.media-amazon.com/images/I/812I8sAkROS.jpg" alt="Harry Potter">
+        </div>
+    </main>
 
-  <div>
-    <img class="animal" src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d?w=400" 
-         alt="Chó con" onmouseover="update(this)" onmouseout="undo()">
-    <img class="animal" src="https://images.unsplash.com/photo-1517423440428-a5a00ad493e8?w=400" 
-         alt="Mèo" onmouseover="update(this)" onmouseout="undo()">
-    <img class="animal" src="https://images.unsplash.com/photo-1504208434309-cb69f4fe52b0?w=400" 
-         alt="Chim cánh cụt" onmouseover="update(this)" onmouseout="undo()">
-    <img class="animal" src="https://images.unsplash.com/photo-1601758123927-19821a022a52?w=400" 
-         alt="Cá vàng" onmouseover="update(this)" onmouseout="undo()">
-  </div>
-
-  <script>
-    function update(previewPic) {
-      console.log("Sự kiện kích hoạt: di chuột vào hình", previewPic.alt);
-      let imageDiv = document.getElementById("image");
-      imageDiv.style.backgroundImage = "url('" + previewPic.src + "')";
-      imageDiv.innerText = previewPic.alt;
-    }
-
-    function undo() {
-      console.log("Hoàn tác: rời chuột khỏi hình.");
-      let imageDiv = document.getElementById("image");
-      imageDiv.style.backgroundImage = "url('')";
-      imageDiv.innerText = "Di chuột qua một hình ảnh bên dưới để hiển thị ở đây.";
-    }
-  </script>
+    <footer>
+        <p>&copy; 2025 Phim yêu thích của tôi</p>
+    </footer>
 </body>
 </html>
